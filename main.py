@@ -94,7 +94,7 @@ if __name__ == "__main__":
              continue
          break
      while True:
-         orders = requests.get("https://mbp16.ez0.us/csclub/orders?data=all").json()
+         orders = requests.get("https://mbp16.ez0.us/csclub/orders/", params={"data": "all"}).json()
          print("Orders: " + str(orders))
          for i in orders:
              draw.rectangle((0,0,width,height), outline=0, fill=0)
